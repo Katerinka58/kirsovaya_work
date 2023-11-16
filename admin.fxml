@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.Admin">
+  <tabs>
+    <Tab text="Аккаунты ">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2E3348;">
+               <children>
+                  <TableView fx:id="table_Admin" layoutX="223.0" layoutY="43.0" prefHeight="267.0" prefWidth="377.0">
+                    <columns>
+                      <TableColumn fx:id="id_table_admin" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="login_table_admin" prefWidth="75.0" text="Логин" />
+                        <TableColumn fx:id="password_table_admin" prefWidth="75.0" text="Пароль" />
+                        <TableColumn fx:id="firstname_table_admin" prefWidth="75.0" text="Имя" />
+                        <TableColumn fx:id="lastname_table_admin" prefWidth="75.0" text="Фамилия" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="id_Admin" layoutX="25.0" layoutY="50.0" promptText="ID" />
+                  <TextField fx:id="login_admin" layoutX="25.0" layoutY="99.0" promptText="Логин" />
+                  <TextField fx:id="password_admin" layoutX="25.0" layoutY="150.0" promptText="Пароль" />
+                  <TextField fx:id="firstname_admin" layoutX="25.0" layoutY="203.0" promptText="Имя" />
+                  <TextField fx:id="lastname_admin" layoutX="25.0" layoutY="248.0" promptText="Фамилия" />
+                  <Button fx:id="dellButton" layoutX="130.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#dell" style="-fx-background-color: #F39C63;" text="Удалить " textFill="WHITE" />
+                  <Button fx:id="addButton" layoutX="25.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#add" style="-fx-background-color: #F39C63;" text="Добавить " textFill="WHITE" />
+                  <Button fx:id="outputButton" layoutX="478.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#latter" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: #F39C63;" text="Выход" textFill="WHITE" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Заявки">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2E3348;">
+               <children>
+                  <TableView fx:id="table_application" layoutY="104.0" prefHeight="263.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="id_table_application" prefWidth="34.0" text="ID" />
+                      <TableColumn fx:id="service_table_application" prefWidth="85.0" text="Вид  услуги" />
+                        <TableColumn fx:id="nameService_table_Application" prefWidth="105.0" text="Наименование услуг" />
+                        <TableColumn fx:id="phone_table_application" prefWidth="100.0" text="Номер телефона" />
+                        <TableColumn fx:id="firstname_table_application" prefWidth="53.0" text="Имя" />
+                        <TableColumn fx:id="lastname_table_application" minWidth="0.0" prefWidth="77.0" text="Фамилия " />
+                        <TableColumn fx:id="addres_table_application" minWidth="0.0" prefWidth="54.0" text="Адрес" />
+                        <TableColumn fx:id="checked_table_application" prefWidth="91.0" text="Проверено" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="checkedButtonApplication" layoutX="424.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#deletingId" style="-fx-background-color: #F39C63;" text="Проверено" textFill="WHITE" />
+                  <TextField fx:id="ID_application" layoutX="193.0" layoutY="42.0" prefHeight="26.0" prefWidth="214.0" promptText="Введите  ID" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Зарегистрировать услугу">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2E3348;">
+               <children>
+                  <TextField fx:id="id_services" layoutX="24.0" layoutY="32.0" promptText="ID" />
+                  <TextField fx:id="typeService_services" layoutX="24.0" layoutY="79.0" promptText="Вид услуги" />
+                  <TextField fx:id="nameService_services" layoutX="24.0" layoutY="122.0" promptText="Наименование услуги" />
+                  <TextField fx:id="dueDate_services" layoutX="220.0" layoutY="32.0" promptText="Срок выполнения" />
+                  <TextField fx:id="price_services" layoutX="220.0" layoutY="79.0" promptText="Цена" />
+                  <TableView fx:id="table_service" layoutX="-7.0" layoutY="161.0" prefHeight="208.0" prefWidth="611.0">
+                    <columns>
+                      <TableColumn fx:id="id_table_services" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="typeService_table_services" prefWidth="99.0" text="Вид услуги" />
+                        <TableColumn fx:id="nameService_table_services" prefWidth="159.0" text="Наименование услуги" />
+                        <TableColumn fx:id="dueDate_table_services" prefWidth="167.0" text="Срок выполнения " />
+                        <TableColumn fx:id="price_table_services" prefWidth="106.0" text="Цена" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="442.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#add_application" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #F39C63;" text="Добавить" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
